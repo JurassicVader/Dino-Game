@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#game{
+    width: 500px;
+    height: 200px;
+    background-color: lightgray;
+}
+
+#ground {
+    width:500px;
+    height: 3px;
+    background-color: #332222;
+    margin-top:120px;
+
+}
+
+#character{
+    width: 40px;
+    height: 43px;
+    background-image: url("images/dinoStand.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    left: 20px;
+    top: 157px;
+}
+
+.animateJump {
+    animation: jump 600ms;
+}
+
+.animateWalk {
+    animation: walk 300ms infinite linear;
+}
+
+.animateCrouch {
+    width: 54;
+    height: 28;
+    animation: crouch 300ms infinite linear;
+}
+#block {
+    width: 18px;
+    height: 37px;
+    background-image: url("images/cactusSmall.png");
+    position: relative;
+    top: 120px;
+    left: 480px;
+}
+
+#cloud1 {
+    width: 48px;
+    height: 13px;
+    background-image: url("images/cloud.png");
+    position: relative;
+    left: 600px;
+    top: -150px;
+    display: none;
+}
+#cloud2 {
+    width: 48px;
+    height: 13px;
+    background-image: url("images/cloud.png");
+    position: relative;
+    left: 600px;
+    top: -190px;
+    display: none;
+}
+#cloud3 {
+    width: 48px;
+    height: 13px;
+    background-image: url("images/cloud.png");
+    position: relative;
+    left: 600px;
+    top: -130px;
+    display: none;
+}
+
+#startGame {
+    width: 100px;
+    height: 25px;
+    border: 2px solid black;
+    background-color: lightslategray;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    left: 200px;
+    top: -133px;
+}
+
+#gameOver {
+    width: 198px;
+    height: 20px;
+    background-image: url("images/gameOver.png");
+    margin-left:151px;
+    margin-top: -157px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+#score {
+    width: 75px;
+    height: 20px;
+    margin-top: -200px;
+}
+@keyframes jump{
+    0%{top: 155px;}
+    30%{top: 95px;}
+    80%{top: 95px;}
+    100%{top: 155px;}
+}
+
+@keyframes walk{
+    0%{
+        background-image: url("images/dinoStand.png");
+    }
+    50%{
+        background-image: url("images/dinoWalkRight.png")
+    }
+    100%{
+        background-image: url("images/dinoWalkLeft.png");
+    }
+}
+
+@keyframes crouch{
+    0%{
+        background-image: url("images/dinoDownRight.png");
+    }
+    100%{
+        background-image: url("images/dinoDownLeft.png");
+    }
+}
+@keyframes block{
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
+
+@keyframes cloud{
+    0%{left: 600px;}
+    100%{left: -40px;}
+}
+
+
+@keyframes ground-move {
+    0%{
+        margin-left:0px;
+    }
+    100%{
+        margin-left: -500px;
+    }    
+}

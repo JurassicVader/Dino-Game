@@ -1,0 +1,6 @@
+dinoStand - 40 x 43px
+cactusSmall - 19 x 37
+cave - 64 x 56px
+DinoDuck - 54 x 28px
+Cloud - 48 x 13px
+GameOver - 99 x 10
